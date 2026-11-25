@@ -1,26 +1,29 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Design tokens sampled from the mockup. Each one becomes a Tailwind utility,
+   e.g. --color-tab -> bg-tab, --shadow-block -> shadow-block. */
+@theme {
+  --color-page: #fafafa;
+  --color-divider: #dedede;
+  --color-line: #dadada;
+  --color-muted: #7f847e;
+
+  --color-tab: #c8d1d9;
+  --color-tab-hover: #b9c3cc;
+  --color-tab-active: #b8b8b8;
+
+  --color-todo: #ffa800;
+  --color-progress: #0030ff;
+  --color-done: #0dff00;
+
+  --color-high: #ff9696;
+  --color-medium: #fff06a;
+  --color-low: #d2ff90;
+
+  --shadow-block: 6px 7px 0 0 #000;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
